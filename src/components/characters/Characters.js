@@ -4,7 +4,7 @@ import './Characters.css';
 
 
 const Characters = ({ characters }) => {
-  console.log(characters)
+  // console.log(characters.data)
   const characterCards = characters.map(character => {
     return (
       <Card 
