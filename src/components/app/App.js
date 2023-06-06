@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { Route } from 'react-router-dom';
 import Characters from '../characters/Characters';
+import Header from '../header/Header';
 import './App.css';
 import acquireInfo from '../../apiCalls';
 
@@ -27,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <main className='App'>
-        <h1>GrandMouse</h1>
+        <Header />
         {console.log("state?", this.state.characters)}
         <Characters characters={this.state.characters}/>
       </main>
