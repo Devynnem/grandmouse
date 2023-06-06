@@ -1,10 +1,26 @@
 import React from 'react';
+import Card from '../card/Card';
 import './Characters.css';
 
 
-const Characters = () => {
+const Characters = ({ characters }) => {
+  console.log(characters)
+  const characterCards = characters.map(character => {
+    return (
+      <Card 
+        image={character.imageUrl}
+        name={character.name}
+        films={character.films}
+        id={character._id}
+        key={character._id}
+      />
+    )
+  })
+  console.log("characterCards",characterCards)
   return (
-    <h2>Characters!</h2>
+    <div className='characters-container'>
+      {characterCards}
+    </div>
   )
 }
 
