@@ -1,12 +1,11 @@
 body {
-  /* background: linear-gradient(to bottom, #2574f3, #fff); */
+
   background: url(../../assets/blue-space-stars-background-night-sky-vector-21474235.webp);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   margin: 40px;
-  /* padding: 10px; */
   text-decoration: none;
 }
 @font-face {
@@ -18,7 +17,6 @@ body {
     font-family: 'Dans Disney Font', sans-serif;
     font-size: 33px;
     text-align: center;
-    /* color:aqua */
     color: #62d7e9;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
 }

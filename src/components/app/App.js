@@ -47,6 +47,7 @@ class App extends Component {
           this.displaySingleCharacterCard(characterId);
           return (<SingleCharacterCard character={this.state.singleCharacter} />)}
         }/>
+        {/* {console.log(this.state.singleCharacter)} */}
       </main>
     )
   }

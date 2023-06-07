@@ -4,7 +4,7 @@ import './SingleCharacterCard.css';
 
 
 const SingleCharacterCard = ({ character }) => {
-  // console.log(character.films)
+  // console.log(character)
   return (
     <div className="single-character-card">
       <img className="single-img"src={character.imageUrl} />
