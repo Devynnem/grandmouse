@@ -3,8 +3,7 @@ import Card from '../card/Card';
 import './Characters.css';
 
 
-const Characters = ({ characters }) => {
-  // console.log(characters.data)
+const Characters = ({ characters, displaySingleCharacterCard }) => {
   const characterCards = characters.map(character => {
     return (
       <Card 
@@ -13,10 +12,10 @@ const Characters = ({ characters }) => {
         films={character.films}
         id={character._id}
         key={character._id}
+        displaySingleCharacterCard={displaySingleCharacterCard}
       />
     )
   })
-  console.log("characterCards",characterCards)
   return (
     <div className='characters-container'>
       {characterCards}
