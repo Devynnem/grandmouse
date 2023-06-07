@@ -1,5 +1,31 @@
-.card {
+/* .card {
   box-sizing: border-box;
   border: 3px solid black;
   padding: 10px;
+} */
+
+.card {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background-color: #a3e1e7;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+.card p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: #666666;
 }
