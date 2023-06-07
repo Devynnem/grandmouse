@@ -1,6 +1,7 @@
 .single-character-card {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
+  justify-content: center;
   color: aliceblue;
   height: 100%;
   width: 100%;
@@ -14,10 +15,10 @@
 
 
 .single-img {
-  height: 40vh;
-  width: 26vw;
+  /* height: 35vh;
+  width: 22vw; */
   margin-left: 5em;
-  margin-bottom: 5em;
+  /* margin-top: 3.5em; */
   /* border: 1px solid #aec9f4; */
   box-shadow: 0 0 5px rgb(190, 222, 228), 0 0 10px rgb(0, 64, 255), 0 0 20px rgb(0, 255, 179); 
   border-radius: 10px;
@@ -31,7 +32,7 @@
   align-items: center;
   margin-left: 3em;
   margin-right: 3em;
-  background: linear-gradient(to bottom, #777d85, #05286a);
+  background: linear-gradient(to bottom, #777d85, #1d59c8);
   border: none;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

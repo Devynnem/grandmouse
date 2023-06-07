@@ -5,7 +5,9 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  margin: 0;
+  margin: 40px;
+  /* padding: 10px; */
+  text-decoration: none;
 }
 @font-face {
   font-family: 'Dans Disney Font';
@@ -27,13 +29,14 @@ h1 {
   font-size: 80px;
   text-align: center;
   color: #fff;
-  background: linear-gradient(45deg, #75f5f7, #ca1bf1);
+  background: linear-gradient(45deg, #75f5f7, #ba06f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
   margin-top: 20px;
   animation: glow 2s infinite;
+≈
 
   @keyframes glow {
     0% {
