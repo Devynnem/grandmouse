@@ -10,7 +10,8 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  background-color: #a3e1e7;
+  /* background-color: #a3e1e7; */
+  background: linear-gradient(to bottom, #aec9f4, #05286a);
   transition: transform 0.3s ease;
 }
 
@@ -21,7 +22,8 @@
 .card h3 {
   margin-top: 0;
   font-size: 1.5rem;
-  color: #333333;
+  color: #b6d0e0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
 }
 
 .card p {
