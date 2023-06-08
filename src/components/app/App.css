@@ -1,11 +1,12 @@
 body {
-  /* background: linear-gradient(to bottom, #2574f3, #fff); */
+
   background: url(../../assets/blue-space-stars-background-night-sky-vector-21474235.webp);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  margin: 0;
+  margin: 40px;
+  text-decoration: none;
 }
 @font-face {
   font-family: 'Dans Disney Font';
@@ -16,12 +17,34 @@ body {
     font-family: 'Dans Disney Font', sans-serif;
     font-size: 33px;
     text-align: center;
-    color:aqua
+    color: #62d7e9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
 }
 
 
 h1 {
   font-family: 'Dans Disney Font', sans-serif;
-  font-size: 67px;
-  color:aqua
+  font-size: 80px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(45deg, #75f5f7, #ba06f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  margin-top: 20px;
+  animation: glow 2s infinite;
+≈
+
+  @keyframes glow {
+    0% {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+    }
+    100% {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+}
 }

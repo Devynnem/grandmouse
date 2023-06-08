@@ -1,5 +1,5 @@
-const acquireInfo = () => {
-return fetch(`https://api.disneyapi.dev/character?page=60&pageSize=50`)
+const acquireInfo = (endpoint) => {
+return fetch(`https://api.disneyapi.dev/character${endpoint}`)
   .then(response => {
     if (!response.ok) {
       throw new Error(`${response.status}`)

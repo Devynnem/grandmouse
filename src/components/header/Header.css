@@ -1,7 +1,7 @@
 .header-container {
   display: flex;
   flex-direction: row;
-  margin: 2em;
+  margin: .5em;
   justify-content: space-evenly;
 }
 
@@ -30,19 +30,19 @@
   }
 } 
 
-@media (max-width: 1390px) {
+/* @media (max-width: 1390px) {
   .header-container {
     align-items: flex-start;
-  }
+  } */
 
   #header-logo {
     height: 15vh;
   }
   .slogan {
-    font-size: 2.5vw;
+    font-size: 3.2vw;
     margin-left: 2em;
   }
-}
+/* } */
 
 @media (max-width: 400px) {
   #header-logo{
