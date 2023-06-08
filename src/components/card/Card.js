@@ -9,7 +9,7 @@ const Card = ({ name, image, id, displaySingleCharacterCard, addFavorite }) => {
   return (
     
     <div className='card'>
-      <button className='fav-btn' onClick={() => addFavorite(id)}>❤️</button>
+      <button className='fav-btn' onClick={() => addFavorite([name, image, id])}>❤️</button>
       <Link to={`/${id}`} key={`/${id}`}>
           {!image ? (<div className="img">{noImage}</div>) : (<img className="img" src={image} onClick={() => displaySingleCharacterCard(id)}/>)}
         <h3>{name}</h3>

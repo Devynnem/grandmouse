@@ -43,6 +43,7 @@ class App extends Component {
 
   addFavorite = (newFav) => {
     this.setState({ favorites: [...this.state.favorites, newFav] })
+    console.log(this.state.favorites)
   }
   
 
