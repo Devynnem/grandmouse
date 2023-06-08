@@ -1,6 +1,7 @@
 .header-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: .5em;
   justify-content: space-evenly;
 }
@@ -39,19 +40,38 @@
     height: 15vh;
   }
 
-  .fav-btn {
-    /* Regular button styles */
-    background-color: transparent;
+  .favorites-btn {
+    font-family: 'Dans Disney Font', sans-serif;
+    background: linear-gradient(45deg, #75f5f7, #ba06f6);
     border: none;
-    font-size: 36px;
-    width: 60px;
-    height: 60px;
+    margin: 50px;
+    font-size: 35px; 
+    width: auto; 
+    padding: 10px 20px; 
     cursor: pointer;
     transition: transform 0.2s;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 21, 255, 0.8), 0 0 10px rgba(0, 255, 64, 0.6), 0 0 20px rgba(255, 215, 0, 0.4);
+    color: #fff; 
   }
   
-  .fav-btn:focus {
-    outline: none;
+  .fav-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
   
   .slogan {

@@ -16,6 +16,7 @@ class App extends Component {
       characters: [],
       singleCharacter:{},
       favorites: [],
+      alreadyFavorited: false,
       error: null
     }
   }
@@ -42,7 +43,12 @@ class App extends Component {
   }
 
   addFavorite = (newFav) => {
-    this.setState({ favorites: [...this.state.favorites, newFav] })
+    if (!this.state.favorites.includes(newFav)) {
+    this.setState({ favorites: [...this.state.favorites, newFav], alreadyFavorited: false })
+    } else {
+      this.setState({ alreadyFavorited: true })
+    }
+    
     console.log(this.state.favorites)
   }
   
@@ -51,6 +57,7 @@ class App extends Component {
     return (
       <main className='App'>
         <Header />
+          {this.state.alreadyFavorited ?  (<h2>Already Favorited!</h2>) : null }
         <Switch>
           <Route exact path="/error"> <Error error="Something went worng, please try again!" /></Route>
           {this.state.error ? (<Redirect to="/error" />) : 

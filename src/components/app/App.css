@@ -1,5 +1,4 @@
 body {
-
   background: url(../../assets/blue-space-stars-background-night-sky-vector-21474235.webp.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -14,13 +13,12 @@ body {
 }
 
 body {
-    font-family: 'Dans Disney Font', sans-serif;
-    font-size: 33px;
-    text-align: center;
-    color: #62d7e9;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+  font-family: 'Dans Disney Font', sans-serif;
+  font-size: 33px;
+  text-align: center;
+  color: #62d7e9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
 }
-
 
 h1 {
   font-family: 'Dans Disney Font', sans-serif;

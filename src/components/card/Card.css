@@ -36,12 +36,6 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
 }
 
-.card p {
-  margin-bottom: 0;
-  font-size: 1rem;
-  color: #666666;
-}
-
 .img {
   border-radius: 10px;
 }
