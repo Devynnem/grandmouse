@@ -1,12 +1,7 @@
 .message {
-  display: flex;
-  align-items: center;
-  text-align: center;
   color: rgb(11, 211, 237);
-  margin: 2em 8em ;
   padding: 2em 3em;
-  width: 40%;
-  font-size: 3.2em;
+  font-size: 1em;
   background: radial-gradient(circle at center,black, #5505aa), 100%;
   box-shadow: 0 0 5px rgb(12, 213, 82), 0 0 10px rgb(12, 196, 224), 0 0 20px rgb(17, 0, 255);
   border-radius: 40px;
