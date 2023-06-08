@@ -3,8 +3,11 @@ import Characters from '../characters/Characters';
 import Header from '../header/Header';
 import './App.css';
 import acquireInfo from '../../apiCalls';
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import SingleCharacterCard from '../singleCharacterCard/SingleCharacterCard';
+import Favorites from '../favorites/Favorites';
+import Error from '../error/Error';
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 class App extends Component {
   constructor() {
@@ -13,6 +16,7 @@ class App extends Component {
       characters: [],
       singleCharacter:{},
       favorites: [],
+      error: null
     }
   }
 
@@ -22,8 +26,8 @@ class App extends Component {
     .then(data => {
         this.setState({ characters: data.data })
       })
-      .catch(err => {
-        throw new Error(`${err}`)
+      .catch(() => {
+        this.setState({ error: "Something went worng, please try again!" })
       })
   }
 
@@ -32,8 +36,8 @@ class App extends Component {
     .then(data => {
       this.setState({ singleCharacter: data.data })
     })
-    .catch(err => {
-      throw new Error(`${err}`)
+    .catch(() => {
+      this.setState({ error: "Something went worng, please try again!" })
     })
   }
 
@@ -46,12 +50,18 @@ class App extends Component {
     return (
       <main className='App'>
         <Header />
-        <Route exact path="/" render={() => <Characters characters={this.state.characters} displaySingleCharacterCard={this.displaySingleCharacterCard} addFavorite={this.addFavorite}/>} />
-        <Route path="/:id" render={({ match }) => {
+        <Switch>
+          <Route exact path="/error"> <Error error="Something went worng, please try again!" /></Route>
+          {this.state.error ? (<Redirect to="/error" />) : 
+          <Route exact path="/" render={() => <Characters characters={this.state.characters} displaySingleCharacterCard={this.displaySingleCharacterCard} addFavorite={this.addFavorite}/>} /> }
+          <Route exact path="/favorites" render={() => <Favorites favorites={this.state.favorites} />} />
+          <Route path="/:id" render={({ match }) => {
           const characterId = match.params.id;
           this.displaySingleCharacterCard(characterId);
           return (<SingleCharacterCard character={this.state.singleCharacter} />)}
         }/>
+         <Route path="*" render={() => (<div> <Error error="This path does not exist."/> </div> )} />
+        </Switch>
       </main>
     )
   }

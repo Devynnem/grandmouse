@@ -9,6 +9,9 @@ const Header = () => {
         <img src={logo} id="header-logo" alt="GrandMouse logo" />  
       </Link>
         <h1>GrandMouse</h1>
+      <Link to="/favorites">
+        <button className="fav-btn ">Favorites</button>
+      </Link>
       <p className="slogan">Welcome new and existing grandparents to a place to keep up with the grandkids favorite character!</p>
     </header>
   );

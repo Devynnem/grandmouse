@@ -38,6 +38,22 @@
   #header-logo {
     height: 15vh;
   }
+
+  .fav-btn {
+    /* Regular button styles */
+    background-color: transparent;
+    border: none;
+    font-size: 36px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .fav-btn:focus {
+    outline: none;
+  }
+  
   .slogan {
     font-size: 3.2vw;
     margin-left: 2em;
