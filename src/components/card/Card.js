@@ -2,6 +2,7 @@ import React from 'react';
 import './Card.css'
 import noImg from '../../assets/Noimage-Small.png'
 import { Link } from 'react-router-dom';
+import PropTypes from "prop-types"
 
 
 const Card = ({ name, image, id, displaySingleCharacterCard, addFavorite }) => {
@@ -20,6 +21,11 @@ const Card = ({ name, image, id, displaySingleCharacterCard, addFavorite }) => {
 }
 
 
-
-
 export default Card;
+
+Card.propType = {
+  name: PropTypes.string,
+  id: PropTypes.number,
+  displaySingleCharacterCard: PropTypes.func,
+  addFavorite: PropTypes.func
+}

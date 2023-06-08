@@ -1,6 +1,6 @@
 import "./Header.css";
 import { Link } from 'react-router-dom'
-import logo from '../../assets/Mickey-Mouse-Ears-Clip-Art-N34.png'
+import logo from '../../assets/Mickey-Mouse-Ears-Clip-Art-N34.png';
 
 const Header = () => {
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../card/Card';
 import './Characters.css';
+import PropTypes from "prop-types"
 
 
 const Characters = ({ characters, displaySingleCharacterCard, addFavorite }) => {
@@ -26,3 +27,9 @@ const Characters = ({ characters, displaySingleCharacterCard, addFavorite }) => 
 
 
 export default Characters;
+
+Characters.propTypes = {
+  characters: PropTypes.arrayOf(PropTypes.object),
+  displaySingleCharacterCard: PropTypes.func,
+  addFavorite: PropTypes.func
+}
