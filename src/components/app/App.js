@@ -11,7 +11,8 @@ class App extends Component {
     super();
     this.state = {
       characters: [],
-      singleCharacter:{}
+      singleCharacter:{},
+      favorites: [],
     }
   }
 
@@ -35,19 +36,22 @@ class App extends Component {
       throw new Error(`${err}`)
     })
   }
+
+  addFavorite = (newFav) => {
+    this.setState({ favorites: [...this.state.favorites, newFav] })
+  }
   
 
   render() {
     return (
       <main className='App'>
         <Header />
-        <Route exact path="/" render={() => <Characters characters={this.state.characters} displaySingleCharacterCard={this.displaySingleCharacterCard}/>} />
+        <Route exact path="/" render={() => <Characters characters={this.state.characters} displaySingleCharacterCard={this.displaySingleCharacterCard} addFavorite={this.addFavorite}/>} />
         <Route path="/:id" render={({ match }) => {
           const characterId = match.params.id;
           this.displaySingleCharacterCard(characterId);
           return (<SingleCharacterCard character={this.state.singleCharacter} />)}
         }/>
-        {/* {console.log(this.state.singleCharacter)} */}
       </main>
     )
   }
