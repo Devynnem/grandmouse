@@ -3,7 +3,7 @@ import Card from '../card/Card';
 import './Characters.css';
 
 
-const Characters = ({ characters, displaySingleCharacterCard }) => {
+const Characters = ({ characters, displaySingleCharacterCard, addFavorite }) => {
   const characterCards = characters.map(character => {
     return (
       <Card 
@@ -13,6 +13,7 @@ const Characters = ({ characters, displaySingleCharacterCard }) => {
         id={character._id}
         key={character._id}
         displaySingleCharacterCard={displaySingleCharacterCard}
+        addFavorite={addFavorite}
       />
     )
   })
