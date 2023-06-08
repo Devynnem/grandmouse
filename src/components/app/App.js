@@ -8,6 +8,7 @@ import SingleCharacterCard from '../singleCharacterCard/SingleCharacterCard';
 import Favorites from '../favorites/Favorites';
 import Error from '../error/Error';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor() {
@@ -77,3 +78,11 @@ class App extends Component {
 }
 
 export default App;
+App.propTypes = {
+  characters: PropTypes.string,
+  singleCharacter: PropTypes.object,
+  favorites: PropTypes.array,
+  alreadyFavorited: PropTypes.bool,
+  displaySingleCharacterCard: PropTypes.func,
+  addFavorite: PropTypes.func
+}

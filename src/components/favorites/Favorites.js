@@ -1,5 +1,7 @@
 import React from 'react';
-import './Favorites.css'
+import './Favorites.css';
+import PropTypes from "prop-types"
+
 
 const Favorites = ({ favorites }) => {
   console.log(favorites)
@@ -12,8 +14,6 @@ const Favorites = ({ favorites }) => {
     )
   })
 
-  
-
   return (
     <div>
       {!favorites.length && <h2>No Favorite Characters yet!</h2>}
@@ -25,3 +25,7 @@ const Favorites = ({ favorites }) => {
 }
 
 export default Favorites;
+
+Favorites.propTypes = {
+  favorites: PropTypes.array
+}
