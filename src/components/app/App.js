@@ -43,13 +43,14 @@ class App extends Component {
   }
 
   addFavorite = (newFav) => {
-    if (!this.state.favorites.includes(newFav)) {
-    this.setState({ favorites: [...this.state.favorites, newFav], alreadyFavorited: false })
+    const existingFav = this.state.favorites.find(fav => fav[0] === newFav[0]);
+
+    if (!existingFav) {
+      this.setState({ favorites: [...this.state.favorites, newFav], alreadyFavorited: false });
+      console.log("newFav", newFav[0]);
     } else {
-      this.setState({ alreadyFavorited: true })
+      this.setState({ alreadyFavorited: true });
     }
-    
-    console.log(this.state.favorites)
   }
   
 
