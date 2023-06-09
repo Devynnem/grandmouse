@@ -8,12 +8,13 @@ import PropTypes from "prop-types"
 const Card = ({ name, image, id, displaySingleCharacterCard, addFavorite }) => {
   const noImage = <img className="no-card-img" src={noImg} alt="" />;
   return (
-    
-    <div className='card'>
+    <div>
       <button className='fav-btn' onClick={() => addFavorite([name, image, id])}>❤️</button>
       <Link to={`/${id}`} key={`/${id}`}>
+    <div className='card'>
           {!image ? (<div className="img">{noImage}</div>) : (<img className="img" src={image} onClick={() => displaySingleCharacterCard(id)}/>)}
         <h3>{name}</h3>
+    </div>
       </Link>
     </div>
     

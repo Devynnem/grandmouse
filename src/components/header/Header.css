@@ -6,13 +6,13 @@
   justify-content: space-evenly;
 }
 
-#header-logo {
+.header-logo {
   border-radius: 150px; 
   height: 20vh; 
   box-shadow: 0 0 5px rgb(4, 202, 242), 0 0 10px rgb(0, 64, 255), 0 0 20px rgb(0, 255, 179); 
   transition: transform 0.3s ease; 
 } 
-#header-logo:hover {
+.header-logo:hover {
   transform: scale(1.1);
 } 
 
@@ -36,7 +36,7 @@
     align-items: flex-start;
   } */
 
-  #header-logo {
+  .header-logo {
     height: 15vh;
   }
 
@@ -81,7 +81,7 @@
 /* } */
 
 @media (max-width: 400px) {
-  #header-logo{
+  .header-logo{
     height: 10vh;
   }
 } 
