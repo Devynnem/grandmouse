@@ -1,10 +1,9 @@
 describe('Main page', () => {
 
   beforeEach(() => {
-    cy.fixture("characterData.json").as("characterData")
-      .intercept('GET', 'https://api.disneyapi.dev/character?page=60&pageSize=50', {
+      cy.intercept('GET', 'https://api.disneyapi.dev/character?page=60&pageSize=50', {
         statusCode: 200,
-        fixture: "CharacterData"
+        fixture: "characterData.json"
       })
     // cy.intercept("GET","https://api.disneyapi.dev/character/308", {
     //     statusCode: 200,
@@ -32,31 +31,33 @@ describe('Main page', () => {
   });
 
   it('should see a single character card displayed', () => {
-    cy.get('.card').last().click()
-      .then((url) => {
-        cy.log('Extracted URL:', 'https://api.disneyapi.dev/character/308'); // Log the extracted URL
-        cy.visit('https://api.disneyapi.dev/character/308'); // Navigate to the extracted URL
-      // Add additional assertions or actions on the new page if needed
-    });
-    //   .then((url) => {
-    //     cy.request('https://api.disneyapi.dev/character/308'); // Navigate to the extracted URL
-      // Add additional assertions or actions on the new page if needed
-    // });
-      // .get('div').get('.single-character-card')
-      // .contains('h2', 'Queen Arianna')
-      // .get('img')
+    cy.intercept("GET","https://api.disneyapi.dev/character/308", {
+       statusCode: 200,
+       fixture: "singleCharacter.json",
+    })
+    cy.get('.card').last().click()  
+      .get('div').get('.single-character-card')
+      .contains('h2', 'Queen Arianna')
+      .get('img')
   });
 
-  // it('should render a specific characters details once clicked', () => {
-  //   // cy.intercept('GET', 'https://api.disneyapi.dev/character/308')
-  //   cy.get('.card').last().click()
-  //     .get('.single-character-card')
-  // });
+  it('should be able to go to Favorites', () => {
+    cy.intercept("GET","https://api.disneyapi.dev/character/favorites", {
+      statusCode: 200,
+      fixture: "singleCharacter.json",
+   })
+    cy.get('.favorites-btn').click()
+      .get('div')
+      .contains('h2','No Favorite Characters yet!')
+  });
 
-  // it('should be able to go to Favorites', () => {
-  //   cy.get('.favorites-btn').click()
-  //     .get('div')
-  //     .contains('h2','No Favorite Characters yet!')
-  // });
+  it('should be able to favorite a character', () => {
+    cy.get('fav-btn').click()
+  })
+
+  it('should show an error message', () => {
+    cy.visit('http://localhost:3000/error')
+      .get(".message").contains('p', "Something went wrong, please try again!")
+  });
 
 })

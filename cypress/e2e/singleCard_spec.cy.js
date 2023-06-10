@@ -1,13 +1,13 @@
 describe('Single Character page', () => {
 
   beforeEach(() => {
-    // cy.fixture("characterData.json").as("characterData")
-    //   .intercept('GET', 'https://api.disneyapi.dev/character?page=60&pageSize=50', {
-    //     statusCode: 200,
-    //     fixture: "CharacterData"
-    //   })
+
+      cy.intercept('GET', 'https://api.disneyapi.dev/character?page=60&pageSize=50', {
+        statusCode: 200,
+        fixture: "characterData.json"
+      })
     cy.visit('http://localhost:3000')
-      .intercept('GET', 'https://api.disneyapi.dev/character?page=60&pageSize=50', {
+      .intercept('GET', 'https://api.disneyapi.dev/character/308', {
       statusCode: 200 })
       .get('.card').last().click()
       .get('.single-character-card')
