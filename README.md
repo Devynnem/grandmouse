@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# GrandMouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract
+This web application was focused on creating a dashboard with easy to read information about Disney Characters for new and existing grandparents. In order to keep up with all the new Disney characters, grandparents are able to look through and read about what movies and tv shows they are in. They can also favorite a character to acess it later. I worked with React Framework, a local server, and made network requests to API endpoints to retrieve and manipulate data.
 
-## Available Scripts
+## Setup
+Fork and clone this [repo](https://github.com/Devynnem/grandmouse) 
 
-In the project directory, you can run:
+*If you run into any trouble, check this [site](https://status.disneyapi.dev/) to see if the Disneyapi.dev server is running properly.*
 
-### `npm start`
+Do the following steps for the repo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In your forked GitHub repository, click the code drop-down menu and copy the SSH key. 
+Open the terminal on your machine and navigate to the containing directory you’d like - to clone the repository folder and its contents to. On the command line, run “git clone” + the SSH key you copied earlier. A new folder will be created containing a local copy of the repository linked to the forked repository you created - enter the new directory.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Install the library dependencies:
 
-### `npm test`
+Run: ```npm install```
+Next: ```npm start``` in the terminal to see the HTML page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```Control + C``` is the command to stop running the local server
 
-### `npm run build`
+## Deployed Link
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can also visit the web page at this [link](https://grandmouse.vercel.app/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Preview of App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![preview-of-app](./src/assets/grandMouse.gif)
 
-### `npm run eject`
+## Reflections: 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+I completed this project as part of my Final solo project of Module 3 for the Turing School of Software and Design Front End Web Development program. It is a four module, seven month focused on preparing students for a career as web developers working with Javascript, HTML, CSS, and the React framework. This project was completed over 5 days in line with the project specification and rubric detailed [here](https://frontend.turing.edu/projects/module-3/showcase.html). This project allowed myself to continue growing my React skills, cypress testing,  and overall my software developer skills. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used:
+React | Cypress | API | CSS | JSX
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Countributors:
+  
+Devynne Marshall ([LinkedIn](https://www.linkedin.com/in/devynnemarshall/) || [github](https://github.com/Devynnem))  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Wins/Challenges:
+Challenges: 
+- One of the major challenges we faced was working with a wild API. The server went down while working on this project which provided some difficulty.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Wins: 
+ - Working with React
+ - Effectively Fetching data from an API.
+ - Continuing growing my CSS and overall developer skills
