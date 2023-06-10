@@ -13,7 +13,7 @@ const Header = () => {
         <button className="favorites-btn ">Favorites</button>
       </Link>
       <p className="slogan">Welcome new and existing grandparents to a place to keep up with the grandkids favorite character!</p>
-      <p>Click ❤️ to Favorite</p>
+      <p>Click Character's ❤️ to Favorite</p>
     </header>
   );
 };

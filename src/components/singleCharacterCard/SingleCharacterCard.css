@@ -38,3 +38,35 @@
 .character-name {
   font-size: 45px;
 }
+
+@media (max-width: 768px) {
+  .single-character-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .single-img {
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+
+  .character-info {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .character-name {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .character-info {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .character-name {
+    font-size: 30px;
+  }
+}
