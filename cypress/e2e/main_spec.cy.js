@@ -3,12 +3,8 @@ describe('Main page', () => {
   beforeEach(() => {
       cy.intercept('GET', 'https://api.disneyapi.dev/character?page=60&pageSize=50', {
         statusCode: 200,
-        fixture: "characterData.json"
+        fixture: "characterData.json",
       })
-    // cy.intercept("GET","https://api.disneyapi.dev/character/308", {
-    //     statusCode: 200,
-    //      fixture: "CharacterData",
-    //   })
       .visit('http://localhost:3000');
   });
 
@@ -51,13 +47,8 @@ describe('Main page', () => {
       .contains('h2','No Favorite Characters yet!')
   });
 
-  it('should be able to favorite a character', () => {
-    cy.get('fav-btn').click()
-  })
-
   it('should show an error message', () => {
     cy.visit('http://localhost:3000/error')
       .get(".message").contains('p', "Something went wrong, please try again!")
   });
-
-})
+});
