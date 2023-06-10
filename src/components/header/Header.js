@@ -1,5 +1,5 @@
 import "./Header.css";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import logo from '../../assets/Mickey-Mouse-Ears-Clip-Art-N34.png';
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
         <button className="favorites-btn ">Favorites</button>
       </Link>
       <p className="slogan">Welcome new and existing grandparents to a place to keep up with the grandkids favorite character!</p>
-      <p>Click ❤️ to Favorite</p>
+      <p className="favorite-message">Click Character's ❤️ to Favorite</p>
     </header>
   );
 };

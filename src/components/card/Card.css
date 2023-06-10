@@ -39,3 +39,23 @@
 .img {
   border-radius: 10px;
 }
+
+@media (max-width: 767px) {
+  .card {
+    height: 17em;
+  }
+
+  .card h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 479px) {
+  .card {
+    height: 25em;
+  }
+
+  .card h3 {
+    font-size: 30px;
+  }
+}

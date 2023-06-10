@@ -4,3 +4,15 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
 }
+
+@media (max-width: 767px) {
+  .characters-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 479px) {
+  .characters-container {
+    grid-template-columns: 1fr;
+  }
+}
