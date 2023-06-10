@@ -33,7 +33,15 @@ class App extends Component {
       })
   }
 
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevProps.match.params.id !== this.props.match.params.id) {
+  //     const characterId = this.props.match.params.id;
+  //     this.displaySingleCharacterCard(characterId);
+  //   }
+  // }
+
   displaySingleCharacterCard = (id) => {
+    console.log(id)
     acquireInfo(`/${id}`)
     .then(data => {
       this.setState({ singleCharacter: data.data })
@@ -45,12 +53,13 @@ class App extends Component {
 
   addFavorite = (newFav) => {
     const existingFav = this.state.favorites.find(fav => fav[0] === newFav[0]);
-
     if (!existingFav) {
       this.setState({ favorites: [...this.state.favorites, newFav], alreadyFavorited: false });
-      console.log("newFav", newFav[0]);
     } else {
       this.setState({ alreadyFavorited: true });
+      setTimeout(() => {
+        this.setState({ alreadyFavorited: false });
+      }, 3000);
     }
   }
   
@@ -59,17 +68,18 @@ class App extends Component {
     return (
       <main className='App'>
         <Header />
-          {this.state.alreadyFavorited ?  (<h2>Already Favorited!</h2>) : null }
+          {this.state.alreadyFavorited && (<h2>Already Favorited!</h2>) }
         <Switch>
-          <Route exact path="/error"> <Error error="Something went worng, please try again!" /></Route>
-          {this.state.error ? (<Redirect to="/error" />) : 
-          <Route exact path="/" render={() => <Characters characters={this.state.characters} displaySingleCharacterCard={this.displaySingleCharacterCard} addFavorite={this.addFavorite}/>} /> }
+          <Route exact path="/error"> 
+            <Error error="Something went wrong, please try again!" />
+          </Route>
           <Route exact path="/favorites" render={() => <Favorites favorites={this.state.favorites} />} />
-          <Route path="/:id" render={({ match }) => {
-          const characterId = match.params.id;
-          this.displaySingleCharacterCard(characterId);
-          return (<SingleCharacterCard character={this.state.singleCharacter} />)}
-        }/>
+          <Route exact path="/:id" render={({ match }) => {
+            const characterId = match.params.id;
+            return <SingleCharacterCard  characterId= {characterId} />}
+          }/>
+          {this.state.error && (<Redirect to="/error" />) }
+          <Route exact path="/" render={() => <Characters characters={this.state.characters} addFavorite={this.addFavorite}/>} /> 
          <Route path="*" render={() => (<div> <Error error="This path does not exist."/> </div> )} />
         </Switch>
       </main>

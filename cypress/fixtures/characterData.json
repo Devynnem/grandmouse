@@ -1,0 +1,40 @@
+{"data": [
+  {
+    "_id": 7,
+    "films": [],
+    "tvShows": [
+      "Gravity Falls"
+    ],
+    "sourceUrl": "https://disney.fandom.com/wiki/.GIFfany",
+    "name": ".GIFfany",
+    "imageUrl": "https://static.wikia.nocookie.net/disney/images/5/51/Giffany.png",
+    "url": "https://api.disneyapi.dev/characters/7"
+  },
+  {
+    "_id": 10,
+    "films": [],
+    "tvShows": [
+      "Lilo & Stitch: The Series",
+      "Stitch!"
+    ],
+    "sourceUrl": "https://disney.fandom.com/wiki/627",
+    "name": "627",
+    "imageUrl": "https://static.wikia.nocookie.net/disney/images/8/80/Profile_-_627.png",
+    "url": "https://api.disneyapi.dev/characters/10"
+  },
+  {
+    "_id": 308,
+    "films": [
+    "Tangled",
+    "Tangled: Before Ever After"
+    ],
+    "tvShows": [
+    "Once Upon a Time",
+    "Tangled: The Series"
+    ],
+    "sourceUrl": "https://disney.fandom.com/wiki/Queen_Arianna",
+    "name": "Queen Arianna",
+    "imageUrl": "https://static.wikia.nocookie.net/disney/images/1/15/Arianna_Tangled.jpg",
+    "url": "https://api.disneyapi.dev/characters/308"
+  }
+]}

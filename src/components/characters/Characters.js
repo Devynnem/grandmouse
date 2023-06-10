@@ -4,7 +4,7 @@ import './Characters.css';
 import PropTypes from "prop-types"
 
 
-const Characters = ({ characters, displaySingleCharacterCard, addFavorite }) => {
+const Characters = ({ characters, addFavorite }) => {
   const characterCards = characters.map(character => {
     return (
       <Card 
@@ -13,7 +13,7 @@ const Characters = ({ characters, displaySingleCharacterCard, addFavorite }) => 
         films={character.films}
         id={character._id}
         key={character._id}
-        displaySingleCharacterCard={displaySingleCharacterCard}
+        // displaySingleCharacterCard={displaySingleCharacterCard}
         addFavorite={addFavorite}
       />
     )
