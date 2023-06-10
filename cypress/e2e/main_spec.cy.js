@@ -16,6 +16,11 @@ describe('Main page', () => {
     cy.contains('p', 'Welcome new and existing grandparents to a place to keep up with the grandkids favorite character!')
   });
 
+  it('should include favoriting instuctions', () => {
+    cy.get('.favorite-message')
+      .contains('p', 'Click Character\'s ❤️ to Favorite')
+  });
+
   it('should have 3 characters displayed', () => {
     cy.get('.characters-container')
       .get('.card').should('have.length', 3)
