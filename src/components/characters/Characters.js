@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../card/Card';
 import './Characters.css';
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 
 const Characters = ({ characters, addFavorite }) => {
@@ -13,18 +13,16 @@ const Characters = ({ characters, addFavorite }) => {
         films={character.films}
         id={character._id}
         key={character._id}
-        // displaySingleCharacterCard={displaySingleCharacterCard}
         addFavorite={addFavorite}
       />
-    )
-  })
+    );
+  });
   return (
     <div className='characters-container'>
       {characterCards}
     </div>
-  )
-}
-
+  );
+};
 
 export default Characters;
 

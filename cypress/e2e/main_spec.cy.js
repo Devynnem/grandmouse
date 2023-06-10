@@ -19,7 +19,7 @@ describe('Main page', () => {
   it('should have 3 characters displayed', () => {
     cy.get('.characters-container')
       .get('.card').should('have.length', 3)
-  })
+  });
 
   it('should have a card with a name of Queen Arianna', () => {
     cy.get('.card').last()
@@ -41,7 +41,7 @@ describe('Main page', () => {
     cy.intercept("GET","https://api.disneyapi.dev/character/favorites", {
       statusCode: 200,
       fixture: "singleCharacter.json",
-   })
+   });
     cy.get('.favorites-btn').click()
       .get('div')
       .contains('h2','No Favorite Characters yet!')

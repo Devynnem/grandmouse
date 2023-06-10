@@ -5,14 +5,12 @@
   color: aliceblue;
   height: 100%;
   width: 100%;
-  
 }
 
 @font-face {
   font-family: 'Beauty and the Beast Disney Font';
   src: url('../../assets/Beautyofthebeast-1VpM.ttf ') format('truetype');
 }
-
 
 .single-img {
   margin-left: 5em;

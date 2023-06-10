@@ -8,7 +8,6 @@
   text-shadow: 0 0 5px black, 0 0 20px rgb(175, 16, 233), 0 0 10px black;
 }
 
-/* Media Query for screens smaller than 768px */
 @media (max-width: 767px) {
   .message {
     padding: 1.5em 2em;
@@ -16,7 +15,6 @@
   }
 }
 
-/* Media Query for screens smaller than 480px */
 @media (max-width: 479px) {
   .message {
     padding: 1em 1.5em;

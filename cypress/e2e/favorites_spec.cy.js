@@ -29,6 +29,5 @@ it('should be able to tell you that the favorites button has already been clicke
   cy.get('.card-div').get('.fav-btn').first().click()
     .get('.card-div').get('.fav-btn').first().click()
   cy.contains('Already Favorited!')
-})
-
-})
+});
+});

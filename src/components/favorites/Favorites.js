@@ -1,18 +1,17 @@
 import React from 'react';
 import './Favorites.css';
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 
 const Favorites = ({ favorites }) => {
-  console.log(favorites)
   const favoriteCharacters = favorites.map(favorite => {
     return (
       <div className='fav-card' key={favorite[0]}>
         <p>{favorite[0]}</p>
         <img className="img" src={favorite[1]} />
       </div>
-    )
-  })
+    );
+  });
 
   return (
     <div>
@@ -22,7 +21,7 @@ const Favorites = ({ favorites }) => {
       </div>
     </div>
   );
-}
+};
 
 export default Favorites;
 

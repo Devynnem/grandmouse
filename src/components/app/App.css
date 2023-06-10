@@ -6,18 +6,16 @@ body {
   background-position: center;
   margin: 40px;
   text-decoration: none;
-}
-@font-face {
-  font-family: 'Dans Disney Font';
-  src: url('../../assets/DansDisney-3nJ8.ttf ') format('truetype');
-}
-
-body {
   font-family: 'Dans Disney Font', sans-serif;
   font-size: 33px;
   text-align: center;
   color: #62d7e9;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+}
+
+@font-face {
+  font-family: 'Dans Disney Font';
+  src: url('../../assets/DansDisney-3nJ8.ttf ') format('truetype');
 }
 
 h1 {
@@ -44,10 +42,9 @@ h1 {
     100% {
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-  };
-};
+  }
+}
 
-/* Media Query for screens smaller than 768px */
 @media (max-width: 767px) {
   body {
     font-size: 24px;
@@ -60,7 +57,6 @@ h1 {
   }
 }
 
-/* Media Query for screens smaller than 480px */
 @media (max-width: 479px) {
   body {
     font-size: 18px;

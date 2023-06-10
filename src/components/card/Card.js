@@ -1,8 +1,8 @@
 import React from 'react';
-import './Card.css'
-import noImg from '../../assets/Noimage-Small.png'
+import './Card.css';
+import noImg from '../../assets/Noimage-Small.png';
 import { Link } from 'react-router-dom';
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 
 const Card = ({ name, image, id, addFavorite }) => {
@@ -17,10 +17,8 @@ const Card = ({ name, image, id, addFavorite }) => {
         </div>
       </Link>
     </div>
-    
-  )
-}
-
+  );
+};
 
 export default Card;
 

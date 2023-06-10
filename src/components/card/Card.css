@@ -40,8 +40,6 @@
   border-radius: 10px;
 }
 
-
-/* Media Query for screens smaller than 768px */
 @media (max-width: 767px) {
   .card {
     height: 17em;
@@ -52,7 +50,6 @@
   }
 }
 
-/* Media Query for screens smaller than 480px */
 @media (max-width: 479px) {
   .card {
     height: 25em;
